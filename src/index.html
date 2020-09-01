@@ -1,13 +1,122 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    //= template/head.html
+    <title>Главная</title>
 </head>
+
+
 <body>
-	<h1>Зачистка</h1>
+<main class="main">
+    <div class="wrap">
+        <h1 class="main-title">Ты сегодня покормил кота?</h1>
+        <section class="cards">
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header__rectangle"></div>
+                        <div class="card-header__title">Сказочное заморское яство</div>
+                    </div>
+                    <div class="card__inner-wrap">
+                        <div class="card__name">Нямушка</div>
+                        <div class="card__filling">с фуа-гра</div>
+                        <div class="card__info">
+                            <div class="card__info-item"><span>10</span> порций</div>
+                            <div class="card__info-item">мышь в подарок</div>
+                        </div>
+
+                        <!--						<figure class="card__imgbox">-->
+                        <!--							<picture><img src="/img/catCrop.png" alt="cat"></picture>-->
+                        <!--						</figure>-->
+                        <div class="card__item" data-amount="0,5" data-unit="кг"></div>
+                    </div>
+                </div>
+
+                <div class="card-caption" data-text="Нежнейшая гусиная печень"><span>Чего сидишь? Порадуй коте, <button type="button" class="card-btn added">купи</button></span></div>
+
+            </div>
+
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header__rectangle"></div>
+                        <div class="card-header__title">Сказочное заморское яство</div>
+                    </div>
+                    <div class="card__inner-wrap">
+                        <div class="card__name">Нямушка</div>
+                        <div class="card__filling">с рыбой</div>
+                        <div class="card__info">
+                            <div class="card__info-item"><span>40 </span>порций </div>
+                            <div class="card__info-item"><span>2 </span> мыши в подарок</div>
+                        </div>
+
+                        <!--						<figure class="card__imgbox">-->
+                        <!--							<picture><img src="/img/catCrop.png" alt="cat"></picture>-->
+                        <!--						</figure>-->
+                        <div class="card__item" data-amount="2" data-unit="кг"></div>
+                    </div>
+                </div>
+                <div class="card-caption" data-text="Головы щучьи с чесноком да свежайшая сёмгушка."><span>Чего сидишь? Порадуй коте, <button type="button" class="card-btn added">купи</button></span></div>
+            </div>
+
+            <div class="card-wrap disabled-card">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header__rectangle"></div>
+                        <div class="card-header__title">Сказочное заморское яство</div>
+                    </div>
+                    <div class="card__inner-wrap">
+                        <div class="card__name">Нямушка</div>
+                        <div class="card__filling">с курой</div>
+                        <div class="card__info">
+                            <div class="card__info-item"><span>100 </span>порций </div>
+                            <div class="card__info-item"><span>5 </span>  мышей в подарок заказчик доволен</div>
+                        </div>
+
+                        <!--						<figure class="card__imgbox">-->
+                        <!--							<picture><img src="/img/catCrop.png" alt="cat"></picture>-->
+                        <!--						</figure>-->
+                        <div class="card__item" data-amount="5" data-unit="кг"></div>
+                    </div>
+                </div>
+                <div class="card-caption" data-text="Филе из цыплят с трюфелями в бульоне."><span>Чего сидишь? Порадуй коте, <button type="button" class="card-btn added">купи</button></span></div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+//= template/footer.html
+
+//= template/script.html
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

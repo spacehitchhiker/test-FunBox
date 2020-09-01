@@ -1,0 +1,181 @@
+@import '/main/var.styl'
+
+.main-title
+  color #fff
+  margin 50px 0 25px
+  position relative
+  z-index 13
+.cards
+  display flex
+  justify-content space-around
+  flex-wrap wrap
+  //@media screen and (max-width 1024px)
+  //  justify-content center
+  //  flex-wrap wrap
+
+  //display grid
+  //grid-template-columns repeat(auto-fit, minmax(320px, 1fr))
+  //justify-items center
+  //grid-gap 80px
+  //@media screen and (max-width 1140px)
+  //  grid-gap 30px
+  //@media screen and (max-width 425px)
+  //  grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
+  & .card-wrap
+    width 320px
+    @media screen and (max-width 1024px)
+      margin 0 10px
+    @media screen and (max-width 425px)
+      width 300px
+      margin 0
+  & .card-caption
+    color #fff
+    font-size 12px
+    text-align center
+    margin 16px 0
+  & .card-btn
+    background transparent
+    border 0
+    margin 0
+    padding 0
+    color _main-theme
+    border-bottom 1px dashed _main-theme
+    &:hover
+      border-bottom 0
+      color _hover
+.card-header
+  display flex
+  height 44px
+  margin-bottom -1px
+  color rgb( 102, 102, 102)
+  &__rectangle
+    position relative
+    width 43px
+    background linear-gradient(-45deg, #fff 28.5px, #1698d9 0, #1698d9 32px, #fff, transparent 0)
+  &__title
+    flex-grow 1
+    padding 15px 0 0 8px
+    border 3px solid _main-theme
+    border-bottom none
+    border-left none
+    border-radius 0 6px 0 0
+    background #fff
+.card
+  position relative
+  display flex
+  flex-direction column
+  border-radius 6px
+  box-sizing border-box
+  &:hover
+    cursor pointer
+  //transform translateY(10px)
+  //transition .5s
+
+
+  &__inner-wrap
+    padding 25px 18px 0 46px
+    height 437px
+    background #fff url("/img/catCrop.png") no-repeat
+    background-position left bottom
+    border-bottom 3px solid _main-theme
+    border-right 3px solid _main-theme
+    border-left 3px solid _main-theme
+    position relative
+  &__name
+    font-size 48px
+    font-weight bold
+    text-align left
+    line-height 1.2em
+  &__caption
+    color rgb( 102, 102, 102)
+
+  &__filling
+    font-size 24px
+    margin-bottom 10px
+  &__info
+    color rgb( 102, 102, 102)
+    font-size 14px
+
+    & span
+      font-weight bold
+  &__imgbox
+    margin 0
+    width 253px
+  &__item
+    position absolute
+    width 85px
+    height 85px
+    border-radius 50%
+    color #fff
+    background _main-theme
+    right 20px
+    bottom 20px
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    text-align center
+    font-size 40px
+    line-height 0.8em
+    &:before
+      content attr(data-amount)
+    &:after
+      content attr(data-unit)
+      font-size 22px
+.added
+  & .card__inner-wrap
+    border-bottom 3px solid _hover
+    border-right 3px solid _hover
+    border-left 3px solid _hover
+  & .card__item
+    background _hover
+  & .card-header
+    &__title
+      border 3px solid _hover
+      border-bottom none
+      border-left none
+    &__rectangle
+      background linear-gradient(-45deg,#fff 28.5px,_hover 0,_hover 32px,#fff,transparent 0)
+.added ~ .card-caption > span
+  display none
+.added ~ .card-caption
+  &:before
+    content attr(data-text)
+.disabled-card
+  & .card
+    color _disabled
+    &:hover
+      cursor default
+    //transform translateY(0)
+    &__info
+      color _disabled
+    &__item
+      background _disabled
+    &__inner-wrap
+      border-bottom 3px solid _disabled
+      border-right 3px solid _disabled
+      border-left 3px solid _disabled
+      background  linear-gradient(to top, #fefefe, #fefefe), url(/img/catCrop.png) no-repeat
+      background-blend-mode hue //soft-light
+      background-position bottom left
+
+  & .card-header
+    color _disabled
+    &__title
+      border 3px solid _disabled
+      border-bottom none
+      border-left none
+    &__rectangle
+      background linear-gradient(-45deg,#fff 28.5px,_disabled 0,_disabled 32px,#fff,transparent 0)
+  & .card-caption
+    color _yellow
+    &:before
+      content attr(data-text)
+    > span
+      display none
+
+
+
+
+
+
